@@ -1,7 +1,7 @@
-### Mante Luo <mante.luo@gmail.com> github.com/mtcodez
+### Mante Luo <mante.luo@gmail.com> github.com/mtcodez Thanks
 ## Spring Boot + Jersey
-Spring Boot is very easy to config and that's why I put jax-rs with it. As for Jersey, it the standard in the open source world.
-- To start, ``` mvn spring-boot:run ```, which can be slow at the first time.
+Spring Boot is very easy to configure and that's why I put JAX-RS with it. As for Jersey, it the standard in the open source world.
+- To start, ``` mvn spring-boot:run ```, which can be slow at the first time
 - And Java 8 is required for better integration, the lambda
 - Maven 3 is required for spring-boot
 
@@ -15,7 +15,7 @@ Root is at /api/contracts
 - PUT     /api/contracts/lineitems/{id}
 - DELETE  /api/contracts/lineitems/{id}
 
-The same is for service order and services agreement, just replace lineitems to the corresponding plural.
+The same is for **service order** and **services agreement**, just replace **lineitems** to the corresponding plural.
 
 For site and invoice
 - GET     /api/contracts/invoices
@@ -30,9 +30,9 @@ For site and invoice
 - PUT     /api/contracts/sites/{id}
 - DELETE  /api/contracts/sites/{id}
 
-## Warnings and Monthly
+## Warnings and Monthly Total
 - GET /api/contracts/warnings # including all contracts and invoices
 - GET /api/contracts/total # total monthly without services agreements
 
 ## Search
-After we can the contract id, we just use /api/contracts/{id}/invoices to get all invoices.
+After getting the contract id, we can just use /api/contracts/{id}/invoices to get all invoices.
