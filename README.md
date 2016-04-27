@@ -1,6 +1,9 @@
 ### Mante Luo <mante.luo@gmail.com> github.com/mtcodez
 ## Spring Boot + Jersey
 Spring Boot is very easy to config and that's why I put jax-rs with it. As for Jersey, it the standard in the open source world.
+- To start, ``` mvn spring-boot:run ```, which can be slow at the first time.
+- And Java 8 is required for better integration, the lambda
+- Maven 3 is required for spring-boot
 
 ## REST APIs
 Root is at /api/contracts
