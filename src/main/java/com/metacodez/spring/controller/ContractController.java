@@ -290,6 +290,11 @@ public class ContractController {
 				total++;
 			}
 		}
+		for (Invoice i : invoiceService.getAll()) {
+			if (invoiceService.isPastDue(i.getId())) {				
+				total++;
+			}
+		}
 		return Response.ok(total).build();
 	}
 	@GET

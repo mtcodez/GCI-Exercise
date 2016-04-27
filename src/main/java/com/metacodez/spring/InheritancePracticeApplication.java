@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 import com.metacodez.spring.entity.Invoice;
 import com.metacodez.spring.entity.LineItemContract;
 import com.metacodez.spring.entity.ServiceOrder;
+import com.metacodez.spring.entity.ServicesAgreement;
 import com.metacodez.spring.entity.Site;
 import com.metacodez.spring.service.ContractService;
 import com.metacodez.spring.service.InvoiceService;
@@ -52,9 +53,11 @@ public class InheritancePracticeApplication {
 			contractService.createServiceOrder(so1);
 			long so1Id = contractService.getAllServiceOrders().iterator().next().getId();
 			
+			ServicesAgreement sa1 = new ServicesAgreement(LocalDate.of(2016, 9, 1), 4, "Good work", "Coding");
+			contractService.createServicesAgreement(sa1);
 			log.info("Size of contracts:" + contractService.getAllContracts().size());
 			
-			Invoice inv1 = new Invoice(495.2, LocalDate.of(2016,4,28), false);
+			Invoice inv1 = new Invoice(495.2, LocalDate.of(2016,7,28), false);
 			contractService.createInvoice(id, inv1);
 			
 			Invoice inv2 = new Invoice(900.34, LocalDate.of(2016,6,30), false);

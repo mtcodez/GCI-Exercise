@@ -1,5 +1,6 @@
 package com.metacodez.spring.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -41,6 +42,16 @@ public class InvoiceService {
 		} else {
 			return false;
 		}
+	}
+	
+	public boolean isPastDue(long id) {
+		Invoice inv = invoiceRepository.findOne(id);
+		if (inv.getDueDate().compareTo(LocalDate.now()) < 0) {
+			return true;
+		} else {
+			return false;
+		}
+		
 	}
 		
 }
